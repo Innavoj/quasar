@@ -1,9 +1,13 @@
 <template>
   <q-footer elevated class="bg-dark">
     <q-toolbar>
-      <q-toolbar-title>Footer</q-toolbar-title>
+      <q-toolbar-title class="text-center">Footer</q-toolbar-title>
     </q-toolbar>
   </q-footer>
 </template>
 
-<style scoped></style>
+<script>
+export default {
+  name: "App",
+};
+</script>
