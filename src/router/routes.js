@@ -4,17 +4,17 @@ const routes = [
     component: () => import("layouts/MainLayout.vue"),
     children: [
       {
-        path: "/error",
-        component: () => import("pages/ErrorNotFound.vue"),
+        path: "/product",
+        component: () => import("pages/ProductView.vue"),
       },
     ],
   },
   {
-    path: "/",
+    path: "/login",
     component: () => import("pages/LoginView.vue"),
   },
   {
-    path: "/dashboard",
+    path: "/",
     component: () => import("pages/DashboardView.vue"),
   },
   {

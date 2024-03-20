@@ -24,6 +24,16 @@
 //$info      : #31CCEC;
 //$warning   : #F2C037;
 
+@font-face {
+    font-family: Welcome;
+    src: url('./fonts/Welcome.ttf');
+}
+
+@font-face {
+    font-family: Barett;
+    src: url('./fonts/Barett\ Street.ttf');
+}
+
 
 $space-base   : 16px !default;
 $space-x-base : $space-base !default;
