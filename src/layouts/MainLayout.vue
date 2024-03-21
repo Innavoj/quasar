@@ -6,6 +6,7 @@
       style="height: 100vh"
       class="shadow-4"
     >
+      <!--Header-->
       <q-header
         elevated
         :class="$q.dark.isActive ? 'bg-secondary' : 'bg-accent'"
@@ -16,10 +17,14 @@
             >Restaurant
             <strong style="font-family: Welcome">Isla Segura</strong>
           </q-toolbar-title>
+          <q-btn flat round dense icon="search" class="q-mr-xs" />
+          <q-btn flat round dense icon="mdi-account" class="q-mr-xs" />
+          <q-btn flat round dense icon="mdi-login" class="q-mr-xs" />
         </q-toolbar>
-        <q-btn icon="mdi-account"> <span>Iniciar Sesion</span> </q-btn>
-        <q-btn icon="mdi-login"> <span>Cerrar Sesion</span> </q-btn>
       </q-header>
+      <!--Menu Drawer-->
+      <MenuBar v-if="isUser"></MenuBar>
+
       <q-page-container>
         <slot name="main"></slot>
       </q-page-container>
@@ -30,21 +35,24 @@
 </template>
 
 <script setup>
+import MenuBar from "src/components/MenuBar.vue";
 import Footer from "src/components/Footer.vue";
-//import { ref } from "vue";
+import { ref } from "vue";
 
-//const isUser = ref(false);
+//const miniState = ref(true);
+const drawer = ref(false);
+
+const isUser = ref(true);
 </script>
 
 <style lang="sass" scoped>
 .q-header
   display: flex
-  flex-direction: row
+
+  flex-wrap: wrap
 
   .q-btn
-
-    font-size: 10px
-
-    .icon
-      size: 10px
+    display: flex
+    flex-wrap: wrap
+    margin: 4px
 </style>

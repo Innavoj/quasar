@@ -1,9 +1,14 @@
 <template>
-  <q-footer elevated class="bg-dark">
-    <q-toolbar>
-      <q-toolbar-title class="text-center">Footer</q-toolbar-title>
-    </q-toolbar>
-  </q-footer>
+  <div>
+    <q-footer elevated class="bg-purple-7">
+      <q-toolbar>
+        <q-toolbar-title class="text-center">Footer</q-toolbar-title>
+        <div>
+          <p>CopyRight. Derechos Reservados. Version 1.0</p>
+        </div>
+      </q-toolbar>
+    </q-footer>
+  </div>
 </template>
 
 <script>

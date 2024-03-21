@@ -12,13 +12,6 @@
   >
     <q-scroll-area class="fit" :horizontal-thumb-style="{ opacity: 0 }">
       <q-list padding>
-        <q-item clickable v-ripple>
-          <q-item-section avatar>
-            <q-icon name="inbox" />
-          </q-item-section>
-          <q-item-section>Inicio </q-item-section>
-        </q-item>
-
         <q-item active clickable v-ripple>
           <q-item-section avatar>
             <q-icon name="star" />
@@ -28,14 +21,14 @@
 
         <q-item active clickable v-ripple>
           <q-item-section avatar>
-            <q-icon name="star" />
+            <q-icon name="mdi-star" />
           </q-item-section>
           <q-item-section> Mis Reservas </q-item-section>
         </q-item>
 
         <q-item clickable v-ripple>
           <q-item-section avatar>
-            <q-icon name="send" />
+            <q-icon name="mdi-calendar" />
           </q-item-section>
           <q-item-section> Calendario </q-item-section>
         </q-item>
@@ -58,7 +51,7 @@
 
         <q-item clickable v-ripple>
           <q-item-section avatar>
-            <q-icon name="drafts" />
+            <q-icon name="mdi-message-text" />
           </q-item-section>
           <q-item-section> Encuesta </q-item-section>
         </q-item>
