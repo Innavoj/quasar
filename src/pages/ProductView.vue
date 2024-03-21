@@ -13,11 +13,11 @@
         <div class="row no-wrap items-center">
           <div class="col text-h6 ellipsis">{{ carta.title }}</div>
           <div
-            class="col-auto text-grey text-caption q-pt-md row no-wrap items-center"
+            class="col-auto text-grey text-caption q-pt-md row wrap items-center"
           ></div>
         </div>
 
-        <q-rating v-model="carta.stars" :max="5" size="32px" />
+        <q-rating v-model="carta.start" :max="5" size="32px" color="yellow-9" />
       </q-card-section>
 
       <q-card-section class="q-pt-none">
@@ -44,28 +44,28 @@ const laCarta = ref([
     src: "https://cdn.quasar.dev/img/chicken-salad.jpg",
     title: "Ensalada de Pollo",
     descripcion: "Ensalada de Pollo con Mayonesa y papas fritas",
-    start: 1,
+    start: 2,
     precio: "12.00",
   },
   {
     src: "https://media.traveler.es/photos/63a1da8f440e8e3aa9a3d8dc/master/w_1600,c_limit/Lhardy%202.jpeg",
     title: "Dulce Goubert",
     descripcion: "Dulce Goubert, Arina con Matequilla y Helado Vainilla",
-    start: 1,
+    start: 3,
     precio: "32.00",
   },
   {
     src: "https://media.traveler.es/photos/635eb57b93bb785c9cec6e36/master/w_1600,c_limit/21393.jpg",
     title: "Garbanzos Pistachos",
     descripcion: "Garbanzos Pistachos con Carne de Elefante y cerdo",
-    start: 1,
+    start: 4,
     precio: "122.00",
   },
   {
     src: "https://media.traveler.es/photos/63a055201155668a66d399c9/master/w_1280,c_limit/Tostadita%20langostinos%20zarandeados_5.jpg",
     title: "Langostinos",
-    descripcion: "Langostinos en salsa ",
-    start: 1,
+    descripcion: "Langostinos con mayonesa y mantequilla",
+    start: 5,
     precio: "322.00",
   },
 ]);

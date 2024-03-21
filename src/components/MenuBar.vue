@@ -12,9 +12,21 @@
   >
     <q-scroll-area class="fit" :horizontal-thumb-style="{ opacity: 0 }">
       <q-list padding>
+        <q-item clickable v-ripple>
+          <q-item-section avatar>
+            <q-avatar size="56px" class="q-mb-sm">
+              <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
+            </q-avatar>
+            <div class="text-weight-bold">Razvan Stoenescu</div>
+            <div>@rstoenescu</div>
+          </q-item-section>
+        </q-item>
+
+        <q-separator />
+
         <q-item active clickable v-ripple>
           <q-item-section avatar>
-            <q-icon name="star" />
+            <q-icon name="mdi-star" />
           </q-item-section>
           <q-item-section> Platos Favoritos </q-item-section>
         </q-item>
