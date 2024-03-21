@@ -10,7 +10,7 @@
       <q-img :src="carta.src" />
 
       <q-card-section>
-        <div class="row no-wrap items-center">
+        <div class="row wrap items-center">
           <div class="col text-h6 ellipsis">{{ carta.title }}</div>
           <div
             class="col-auto text-grey text-caption q-pt-md row wrap items-center"

@@ -17,11 +17,14 @@
       </div>
       <div class="footer row text-center align-center justify-center">
         <div class="col-xs-12 col-sm-6 col-md-2">
+          <a style="color: cyan; font-size: 24px; font-family: Welcome"
+            >Isla Segura</a
+          >
           <q-img src="src/assets/images/slider3.jpg" class="imagen" />
         </div>
         <div class="col-xs-12 col-sm-6 col-md-2">
           <h6>Nosotros</h6>
-          <p>Camino de la Isla. Santiago de Cuba</p>
+          <a>Camino de la Isla. Santiago de Cuba</a>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-2">
           <h6>Politica</h6>
@@ -35,10 +38,12 @@
       </div>
 
       <div class="text-center align-center justify-center">
-        <h6>
-          {{ new Date().getFullYear() }} — Isla Segura Copyright(R) Derechos
-          Reservados. Version 1.0
-        </h6>
+        <p>
+          <strong>
+            {{ new Date().getFullYear() }} — Isla Segura Copyright(R) Derechos
+            Reservados. Version 1.0</strong
+          >
+        </p>
       </div>
     </q-footer>
   </div>
@@ -102,6 +107,10 @@ a {
   color: white;
 }
 
+p {
+  color: cyan;
+  font-size: medium;
+}
 .btn-icons:hover {
   color: cyan;
 }
