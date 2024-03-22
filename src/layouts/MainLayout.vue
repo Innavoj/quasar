@@ -18,9 +18,9 @@
             >Restaurant
             <strong style="font-family: Welcome">Isla Segura</strong>
           </q-toolbar-title>
-          <q-btn flat round dense icon="search" class="q-mr-xs" />
-          <q-btn flat round dense icon="mdi-account" class="q-mr-xs" />
-          <q-btn flat round dense icon="mdi-login" class="q-mr-xs" />
+
+          <q-btn to=/login flat round dense icon="mdi-login" class="q-mr-xs" />
+          <q-btn flat round dense icon="mdi-logout" class="q-mr-xs" />
         </q-toolbar>
       </q-header>
       <!--Menu Drawer-->
@@ -117,6 +117,8 @@
 //import MenuBar from "src/components/MenuBar.vue";
 import Footer from "src/components/Footer.vue";
 import { ref } from "vue";
+//import { useRoute } from "src/router/routes";
+//const route = useRoute();
 
 const miniState = ref(true);
 const drawer = ref(false);

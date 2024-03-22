@@ -1,9 +1,14 @@
 <template>
   <q-card
-    class="my-card q-ma-lg absolute-center self-center items-center justify-center text-center flex-xs-center shadow-12"
+    class="my-card q-pa-md q-gutter-md absolute-center self-center items-center justify-center text-center shadow-12"
   >
     <q-card-section>
-      <q-img class="q-ma-xs" src="../assets/images/slider3.jpg" cover />
+      <q-img
+        class="q-ma-xs"
+        src="../assets/images/slider3.jpg"
+        :ratio="10 / 6"
+        cover
+      />
     </q-card-section>
 
     <q-card-section>
@@ -42,18 +47,27 @@
       </div>
     </q-card-section>
 
-    <q-separator dark-3 />
-
-    <q-card-actions class="q-pa-lg" align="center">
+    <q-card-actions class="q-mt-xs row" align="center">
       <q-btn
         label="Conectar"
         type="submit"
         icon="mdi-check-circle"
         color="accent"
-        class="q-mt-xx"
+        class="q-mt-xs"
         align="center"
         outline
         @click="authUser"
+      />
+      <q-btn
+        @click.prevent="loginGoogle"
+        label="Login con Google"
+        text-color="success"
+        icon="mdi-google"
+        class="q-mt-sm"
+        align="center"
+        outline
+        rounded
+        type="submit"
       />
     </q-card-actions>
   </q-card>
@@ -62,18 +76,67 @@
 <script setup>
 import { ref } from "vue";
 
+import { initializeApp } from "firebase/app";
+const firebaseConfig = {
+  apiKey: "AIzaSyCyu2RgYwmZrYRcxOLFK7cjbWo-QKwHZCk",
+  authDomain: "restaurant-5b3c0.firebaseapp.com",
+  projectId: "restaurant-5b3c0",
+  storageBucket: "restaurant-5b3c0.appspot.com",
+  messagingSenderId: "812325891523",
+  appId: "1:812325891523:web:5e8ce53b2b92cd2b042176",
+  measurementId: "G-JBZVMYV5VN",
+};
+
+initializeApp(firebaseConfig);
+
 const email = ref("");
 const password = ref("");
 const isPwd = ref(true);
+
+import {
+  GoogleAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  getAuth,
+} from "firebase/auth";
+
+import router from "src/router/routes";
+
+const googleProvider = new GoogleAuthProvider();
+const auth = getAuth();
+
+const authUser = () => {
+  const auth = getAuth();
+  signInWithEmailAndPassword(auth, email.value, password.value)
+    .then(() => {
+      alert("exito");
+      router.push("/mainlayout");
+    })
+    .catch((error) => {
+      alert("error" + error.message);
+    });
+};
+
+const loginGoogle = () => {
+  signInWithPopup(auth, googleProvider)
+    .then((result) => {
+      const credencial = GoogleAuthProvider.credentialFromResult(result);
+      const token = credencial.accessToken;
+      alert("success" + token);
+    })
+    .catch((error) => {
+      alert("login error");
+    });
+};
 </script>
 
 <style scoped>
 .my-card {
   height: 550px;
-  width: 400px;
+  width: 360px;
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 360px) {
   .my-card {
     height: 0px;
     width: 300px;
@@ -82,7 +145,7 @@ const isPwd = ref(true);
   }
   .q-img {
     height: 200px;
-    width: 250px;
+    width: 220px;
   }
 }
 </style>

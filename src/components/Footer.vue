@@ -87,8 +87,8 @@ export default {
 
 .imagen {
   flex-wrap: wrap;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 130px;
   border-radius: 25px;
 }
 
