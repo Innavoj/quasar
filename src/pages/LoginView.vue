@@ -1,75 +1,76 @@
 <template>
   <q-card
-    class="my-card q-pa-md q-gutter-md absolute-center self-center items-center justify-center text-center shadow-12"
-  >
-    <q-card-section>
-      <q-img
-        class="q-ma-xs"
-        src="../assets/images/slider3.jpg"
-        :ratio="10 / 6"
-        cover
-      />
-    </q-card-section>
-
-    <q-card-section>
-      <div>
-        <q-input
+    class="my-card q-pa-md q-gutter-md bg-pink-2 absolute-center self-center items-center justify-center text-center shadow-12"
+    ><q-form @submit.prevent>
+      <q-card-section>
+        <q-img
           class="q-ma-xs"
-          v-model="email"
-          filled
-          type="text"
-          label="email"
-          color="accent"
+          src="../assets/images/slider3.jpg"
+          :ratio="10 / 6"
+          cover
         />
-      </div>
-      <div>
-        <q-input
-          class="q-ma-xs"
-          color="accent"
-          v-model="password"
-          filled
-          :type="isPwd ? 'password' : 'text'"
-          label="Password"
-          :rules="[
-            (val) =>
-              (val && val.length > 8) ||
-              'La password debe tener mas de 8 caracteres',
-          ]"
-        >
-          <template v-slot:append>
-            <q-icon
-              :name="isPwd ? 'visibility_off' : 'visibility'"
-              class="cursor-pointer"
-              @click="isPwd = !isPwd"
-            />
-          </template>
-        </q-input>
-      </div>
-    </q-card-section>
+      </q-card-section>
 
-    <q-card-actions class="q-mt-xs row" align="center">
-      <q-btn
-        label="Conectar"
-        type="submit"
-        icon="mdi-check-circle"
-        color="accent"
-        class="q-mt-xs"
-        align="center"
-        outline
-        @click="authUser"
-      />
-      <q-btn
-        @click.prevent="loginGoogle"
-        label="Login con Google"
-        text-color="success"
-        icon="mdi-google"
-        class="q-mt-sm"
-        align="center"
-        outline
-        rounded
-        type="submit"
-      />
-    </q-card-actions>
+      <q-card-section>
+        <div>
+          <q-input
+            class="q-ma-xs"
+            v-model="email"
+            filled
+            type="text"
+            label="email"
+            color="accent"
+          />
+        </div>
+        <div>
+          <q-input
+            class="q-ma-xs"
+            color="accent"
+            v-model="password"
+            filled
+            :type="isPwd ? 'password' : 'text'"
+            label="Password"
+            :rules="[
+              (val) =>
+                (val && val.length > 8) ||
+                'La password debe tener mas de 8 caracteres',
+            ]"
+          >
+            <template v-slot:append>
+              <q-icon
+                :name="isPwd ? 'visibility_off' : 'visibility'"
+                class="cursor-pointer"
+                @click="isPwd = !isPwd"
+              />
+            </template>
+          </q-input>
+        </div>
+      </q-card-section>
+
+      <q-card-actions class="q-mt-xs row" align="center">
+        <q-btn
+          @click="authUser"
+          label="Conectar"
+          type="submit"
+          icon="mdi-check-circle"
+          color="green"
+          class="q-mt-xs"
+          align="center"
+          outline
+        />
+        <q-btn
+          @click.prevent="loginGoogle"
+          type="submit"
+          label="Login con Google"
+          color="success"
+          icon="mdi-google"
+          class="q-mt-sm"
+          align="center"
+          outline
+          rounded
+        />
+      </q-card-actions>
+    </q-form>
   </q-card>
 </template>
 
@@ -110,7 +111,7 @@ const authUser = () => {
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then(() => {
       alert("exito");
-      router.push("/mainlayout");
+      router.push("/");
     })
     .catch((error) => {
       alert("error" + error.message);
@@ -134,6 +135,9 @@ const loginGoogle = () => {
 .my-card {
   height: 550px;
   width: 360px;
+}
+.q-btn:hover {
+  color: blueviolet;
 }
 
 @media only screen and (max-width: 360px) {
