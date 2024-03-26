@@ -19,8 +19,16 @@
             <strong style="font-family: Welcome">Isla Segura</strong>
           </q-toolbar-title>
 
-          <q-btn to=/login flat round dense icon="mdi-login" class="q-mr-xs" />
-          <q-btn flat round dense icon="mdi-logout" class="q-mr-xs" />
+          <q-btn v-if="!isUser" to=/login flat round dense icon="mdi-login"
+          class="q-mr-xs" />
+          <q-btn
+            v-if="isUser"
+            flat
+            round
+            dense
+            icon="mdi-logout"
+            class="q-mr-xs"
+          />
         </q-toolbar>
       </q-header>
       <!--Menu Drawer-->
@@ -36,11 +44,13 @@
 
 <script setup>
 import MenuBar from "src/components/MenuBar.vue";
+//import Header from "src/components/Header.vue";
 import Footer from "src/components/Footer.vue";
 
 import { ref } from "vue";
 
 const isUser = ref(false);
+const drawer = ref(false);
 </script>
 
 <style lang="sass" scoped>

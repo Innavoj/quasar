@@ -1,4 +1,5 @@
 <template>
+  <!--Menu Lateral Drawer-->
   <q-drawer
     v-model="drawer"
     show-if-above
@@ -79,9 +80,14 @@
   </q-drawer>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const miniState = ref(true);
-const drawer = ref(false);
+<script>
+//import { ref } from "vue";
+export default {
+  data() {
+    return {
+      miniState: false,
+      drawer: false,
+    };
+  },
+};
 </script>

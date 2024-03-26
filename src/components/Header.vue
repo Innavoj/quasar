@@ -1,22 +1,27 @@
 <template>
-  <div>
-    <q-header elevated :class="$q.dark.isActive ? 'bg-secondary' : 'bg-accent'">
-      <q-toolbar>
-        <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
-        <q-toolbar-title style="font-family: Barett; font-size: 25px"
-          >Restaurant
-          <strong style="font-family: Welcome">Isla Segura</strong>
-        </q-toolbar-title>
-      </q-toolbar>
-      <q-btn icon="mdi-account"> <span>Iniciar Sesion</span> </q-btn>
-      <q-btn icon="mdi-login"> <span>Cerrar Sesion</span> </q-btn>
-    </q-header>
-  </div>
+  <q-header elevated :class="$q.dark.isActive ? 'bg-secondary' : 'bg-accent'">
+    <q-toolbar>
+      <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
+      <q-toolbar-title style="font-family: Barett; color: cyan; font-size: 25px"
+        >Restaurant
+        <strong style="font-family: Welcome">Isla Segura</strong>
+      </q-toolbar-title>
+
+      <q-btn to=/login flat round dense icon="mdi-login" class="q-mr-xs" />
+      <q-btn flat round dense icon="mdi-logout" class="q-mr-xs" />
+    </q-toolbar>
+  </q-header>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script>
+//import { ref } from "vue";
 
-//const miniState = ref(true);
-const drawer = ref(false);
+export default {
+  name: "App",
+  data() {
+    return {
+      drawer: true,
+    };
+  },
+};
 </script>
