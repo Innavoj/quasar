@@ -19,7 +19,7 @@
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
             <div class="text-weight-bold">Razvan Stoenescu</div>
-            <div>@rstoenescu</div>
+            <div>@rstoenescu Alex</div>
           </q-item-section>
         </q-item>
 
@@ -82,11 +82,14 @@
 
 <script>
 //import { ref } from "vue";
+import { useCounterStore } from "src/stores/authStore";
+
 export default {
   data() {
     return {
-      miniState: false,
+      miniState: true,
       drawer: false,
+      store: useCounterStore,
     };
   },
 };

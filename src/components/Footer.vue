@@ -11,7 +11,7 @@
           titulo
         }}</a>
         <q-img src="src/assets/images/slider3.jpg" class="imagen" />
-        <div class="row">
+        <div class="row text-center align-center justify-center">
           <q-btn
             v-for="(icon, index) in redes"
             flat
@@ -19,7 +19,7 @@
             :key="index"
             :icon="icon.icons"
             :href="icon.src"
-            class="btn-icons q-ma-xs q-ma-sm"
+            class="btn-icons text-center"
           >
           </q-btn>
         </div>
@@ -35,8 +35,8 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-2">
         <h6>Contactos</h6>
-        <a href="#"><q-icon name="mdi-email" />gerente@gmail.com</a>
-        <a href="#"><q-icon name="mdi-email" />islasegura@gmail.com</a>
+        <a href="#">gerente@gmail.com</a>
+        <a href="#">islasegura@gmail.com</a>
       </div>
     </div>
     <q-separator />

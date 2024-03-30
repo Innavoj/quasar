@@ -53,7 +53,7 @@
         </div>
         <div class="row wrap q-ma-md flex-center">
           <q-btn
-            @click="authUser"
+            @click="store.userLogin(email, password)"
             label="Conectar"
             type="submit"
             icon="mdi-check-circle"
@@ -81,6 +81,9 @@
 
 <script setup>
 import { ref } from "vue";
+import { useCounterStore } from "src/stores/authStore";
+
+const store = useCounterStore();
 
 const email = ref("");
 const password = ref("");
