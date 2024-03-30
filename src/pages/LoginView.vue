@@ -20,6 +20,7 @@
         </div>
         <div class="row-md-4">
           <q-input
+            :rules="store.rulesEmail"
             class="q-ma-xs"
             v-model="email"
             filled
@@ -36,11 +37,7 @@
             filled
             :type="isPwd ? 'password' : 'text'"
             label="Password"
-            :rules="[
-              (val) =>
-                (val && val.length > 8) ||
-                'La password debe tener mas de 8 caracteres',
-            ]"
+            :rules="store.rulesPasswd"
           >
             <template v-slot:append>
               <q-icon

@@ -14,6 +14,17 @@ export const useCounterStore = defineStore("counter", {
     errorCode: "",
     errorMessage: "",
     userId: "",
+    rulesPasswd: [
+      (val) => !!val || "Password is required",
+      (val) =>
+        (val && val.length > 8) ||
+        "The password must be greater than 8 characters",
+    ],
+    rulesEmail: [
+      (val) => !!val || "This Email is required",
+      (val) => /.+@.+\..+/.test(val) || "The email must be valid",
+    ],
+    rulesName: [(val) => !!val || "This field is required"],
   }),
 
   getters: {},
