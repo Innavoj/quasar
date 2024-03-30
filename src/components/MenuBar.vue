@@ -1,6 +1,31 @@
 <template>
+  <q-header elevated :class="$q.dark.isActive ? 'bg-secondary' : 'bg-accent'">
+    <q-toolbar>
+      <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
+      <q-toolbar-title
+        class="wrap"
+        style="font-family: Barett; color: cyan; font-size: 25px"
+        >Restaurant
+        <strong class="wrap" style="font-family: Welcome">Isla Segura</strong>
+      </q-toolbar-title>
+
+      <q-btn v-if="!store.userId" to=/login flat round dense icon="mdi-login"
+      class="q-mr-xs" label="Login" />
+      <q-btn
+        v-if="store.userId"
+        @click="store.userLogout"
+        flat
+        round
+        dense
+        icon="mdi-logout"
+        class="q-mr-xs"
+        label="Logout"
+      />
+    </q-toolbar>
+  </q-header>
   <!--Menu Lateral Drawer-->
   <q-drawer
+    v-if="store.userId"
     v-model="drawer"
     show-if-above
     :mini="miniState"
@@ -18,32 +43,26 @@
             <q-avatar size="56px" class="q-mb-sm">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
-            <div class="text-weight-bold">Razvan Stoenescu</div>
-            <div>@rstoenescu Alex</div>
+            <div class="text-weight-bold">Alex Hernandez</div>
+            <div>{{ store.userEmail }}</div>
           </q-item-section>
         </q-item>
 
         <q-separator />
 
-        <q-item active clickable v-ripple>
+        <q-item active clickable v-ripple to="/product">
           <q-item-section avatar>
             <q-icon name="mdi-star" />
           </q-item-section>
           <q-item-section> Platos Favoritos </q-item-section>
         </q-item>
 
-        <q-item active clickable v-ripple>
-          <q-item-section avatar>
-            <q-icon name="mdi-star" />
-          </q-item-section>
-          <q-item-section> Mis Reservas </q-item-section>
-        </q-item>
-
-        <q-item clickable v-ripple>
+        <q-item to="/misreservas">
           <q-item-section avatar>
             <q-icon name="mdi-calendar" />
+            <Calendar />
           </q-item-section>
-          <q-item-section> Calendario </q-item-section>
+          <q-item-section> Mis Reservas </q-item-section>
         </q-item>
 
         <q-item clickable v-ripple>
@@ -80,17 +99,13 @@
   </q-drawer>
 </template>
 
-<script>
-//import { ref } from "vue";
+<script setup>
+import { ref } from "vue";
 import { useCounterStore } from "src/stores/authStore";
+import Calendar from "components/Calendar.vue";
 
-export default {
-  data() {
-    return {
-      miniState: true,
-      drawer: false,
-      store: useCounterStore,
-    };
-  },
-};
+const drawer = ref(false);
+const miniState = ref(true);
+
+const store = useCounterStore();
 </script>

@@ -29,9 +29,12 @@
 
       <q-separator />
 
-      <q-card-actions>
-        <q-btn flat round icon="event" />
-        <q-btn flat color="primary"> Reservar </q-btn>
+      <q-card-actions v-if="store.userId">
+        <q-icon flat round name="mdi-calendar" />
+        <q-btn flat color="primary">
+          Reservar
+          <calendar />
+        </q-btn>
       </q-card-actions>
     </q-card>
   </div>
@@ -39,6 +42,10 @@
 
 <script setup>
 import { ref } from "vue";
+import { useCounterStore } from "src/stores/authStore";
+import Calendar from "src/components/Calendar.vue";
+const store = useCounterStore();
+
 const laCarta = ref([
   {
     src: "https://cdn.quasar.dev/img/chicken-salad.jpg",
@@ -64,7 +71,8 @@ const laCarta = ref([
   {
     src: "https://media.traveler.es/photos/63a055201155668a66d399c9/master/w_1280,c_limit/Tostadita%20langostinos%20zarandeados_5.jpg",
     title: "Langostinos",
-    descripcion: "Langostinos con mayonesa y mantequilla",
+    descripcion:
+      "Langostinos con mayonesa y mantequilla. Ensaladas de tomate y pepinillos",
     start: 5,
     precio: "322.00",
   },
