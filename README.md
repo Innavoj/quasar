@@ -1,4 +1,4 @@
-# Quasar App (quasar)
+# App para reservas de un Restaurant. 🍟🍔🍛🍴
 
 A Quasar Project
 
