@@ -1,19 +1,23 @@
 const routes = [
   {
     path: "/",
-    component: () => import("pages/ProductView.vue"),
+    component: () => import("src/pages/ProductPages.vue"),
   },
   {
     path: "/login",
-    component: () => import("pages/LoginView.vue"),
+    component: () => import("src/pages/LoginPages.vue"),
   },
   {
     path: "/misreservas",
-    component: () => import("pages/MisReservasView.vue"),
+    component: () => import("src/pages/MisReservasPages.vue"),
   },
   {
     path: "/product",
-    component: () => import("pages/ProductView.vue"),
+    component: () => import("src/pages/ProductPages.vue"),
+  },
+  {
+    path: "/encuesta",
+    component: () => import("src/pages/EncuestaPages.vue"),
   },
   // Always leave this as last one,
   // but you can also remove it

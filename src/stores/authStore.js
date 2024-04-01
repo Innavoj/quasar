@@ -47,7 +47,11 @@ export const useCounterStore = defineStore("counter", {
         .catch((error) => {
           this.errorCode = error.code;
           this.errorMessage = error.message;
-          console.log("error: ", this.errorCode + this.errorMessage);
+          console.log(
+            "Error en la conexion: ",
+            this.errorCode + this.errorMessage
+          );
+          alert("Error en la conexion");
           return false;
         });
     },

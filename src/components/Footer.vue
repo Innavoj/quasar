@@ -92,7 +92,7 @@ export default {
   flex-wrap: wrap;
   width: 150px;
   height: 130px;
-  border-radius: 25px;
+  border-radius: 50%;
 }
 
 h6 {

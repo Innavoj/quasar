@@ -54,7 +54,7 @@
             label="Conectar"
             type="submit"
             icon="mdi-check-circle"
-            color="green"
+            color="cyan"
             class="q-pa-xs q-ma-xs"
             align="center"
             outline
