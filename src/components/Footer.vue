@@ -8,7 +8,7 @@
     <div class="footer row text-center align-center justify-center">
       <div class="colunm col-xs-12 col-sm-6 col-md-2">
         <a style="color: cyan; font-size: 24px; font-family: Welcome">{{
-          titulo
+          store.titulo
         }}</a>
         <q-img src="src/assets/images/slider3.jpg" class="imagen" />
         <div class="row text-center align-center justify-center">
@@ -25,12 +25,13 @@
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-2">
-        <h6>Nosotros</h6>
-        <a>Camino de la Isla. Santiago de Cuba</a>
+        <h6>Sobre Nosotros</h6>
+        <a>Calle Camino de la Isla. Santiago de Cuba. Cuba</a>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-2">
         <h6>Politica</h6>
         <a href="#">Privacida</a>
+        <a href="#">Términos y Condiciones</a>
         <a href="#">Aviso Legal</a>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-2">
@@ -43,7 +44,7 @@
     <div class="text-center align-center justify-center">
       <p>
         <strong>
-          {{ new Date().getFullYear() }} — {{ titulo }} Copyright(R) Derechos
+          {{ new Date().getFullYear() }} — {{ store.titulo }} © Derechos
           Reservados. Version 1.0</strong
         >
       </p>
@@ -52,6 +53,8 @@
 </template>
 
 <script>
+import { useCounterStore } from "src/stores/authStore";
+
 export default {
   name: "App",
   data: () => ({
@@ -73,7 +76,7 @@ export default {
         src: "https://www.twitter.com",
       },
     ],
-    titulo: "Isla Segura",
+    store: useCounterStore(),
   }),
 };
 </script>

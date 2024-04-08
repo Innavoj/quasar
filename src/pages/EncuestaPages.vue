@@ -9,7 +9,7 @@
       >
         Encuesta
       </h3>
-      <q-form @submit="onSubmit" class="q-gutter-md">
+      <q-form class="q-gutter-md">
         <div
           class="q-ma-lg"
           v-for="(pregunta, index) in preguntas"
@@ -46,9 +46,9 @@
             class="q-ma-sm"
             align="center"
             label="Enviar"
-            type="submit"
             color="cyan"
             icon="mdi-checkbox-marked-circle"
+            outline
           />
         </div>
       </q-form>

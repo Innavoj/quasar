@@ -7,7 +7,7 @@
         class="text-center wrap"
         style="color: blueviolet; font-family: Welcome"
       >
-        Restaurant Isla Segura
+        Restaurant {{ store.titulo }}
       </h3>
       <q-form>
         <div class="row">
@@ -21,7 +21,7 @@
         <div class="row-md-4">
           <q-input
             :rules="store.rulesEmail"
-            class="q-ma-xs"
+            class="q-ma-lg"
             v-model="email"
             filled
             type="text"
@@ -31,7 +31,7 @@
         </div>
         <div class="row-md-4">
           <q-input
-            class="q-ma-xs"
+            class="q-ma-lg"
             color="accent"
             v-model="password"
             filled

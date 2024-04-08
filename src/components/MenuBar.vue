@@ -6,7 +6,9 @@
         class="wrap"
         style="font-family: Barett; color: cyan; font-size: 25px"
         >Restaurant
-        <strong class="wrap" style="font-family: Welcome">Isla Segura</strong>
+        <strong class="wrap" style="font-family: Welcome">{{
+          store.titulo
+        }}</strong>
       </q-toolbar-title>
 
       <q-btn v-if="!store.userId" to=/login flat round dense icon="mdi-login"
@@ -43,14 +45,14 @@
             <q-avatar size="56px" class="q-mb-sm">
               <img src="https://cdn.quasar.dev/img/boy-avatar.png" />
             </q-avatar>
-            <div class="text-weight-bold">Alex Hernandez</div>
-            <div>@Alex</div>
+            <div class="text-weight-bold">{{ store.userEmail }}</div>
+            <div></div>
           </q-item-section>
         </q-item>
 
         <q-separator />
 
-        <q-item clickable to="/product">
+        <q-item clickable to="/">
           <q-item-section avatar>
             <q-icon name="mdi-star" />
           </q-item-section>
@@ -71,7 +73,7 @@
           icon="mdi-shopping"
           expand-separator
         >
-          <q-item clickable to="/misreservas">
+          <q-item clickable>
             <q-item-section avatar>
               <q-icon name="mdi-star" />
             </q-item-section>
@@ -103,7 +105,7 @@
           </q-item>
         </q-expansion-item>
 
-        <q-item clickable>
+        <q-item clickable to="/product">
           <q-item-section avatar>
             <q-icon name="mdi-cart" />
           </q-item-section>
@@ -119,7 +121,7 @@
           <q-item-section> Encuesta </q-item-section>
         </q-item>
 
-        <q-item clickable>
+        <q-item clickable to="/contacto">
           <q-item-section avatar>
             <q-icon name="drafts" />
           </q-item-section>

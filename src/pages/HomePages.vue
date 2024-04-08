@@ -76,55 +76,6 @@ const laCarta = ref([
     start: 5,
     precio: "322.00",
   },
-  {
-    src: "https://medias.treew.com/imgproducts/middle/162015.jpg",
-    title: "Cerveza Presidente",
-    descripcion: "Refrescante Cerveza Presidente",
-    start: 5,
-    precio: "190.00",
-  },
-  {
-    src: "https://www.rapicargatravel.com/wp-content/uploads/2023/08/Cerveza-Cristal-6-Latas.jpg",
-    title: "Cerveza Cristal",
-    descripcion: "La Favorita, Cerveza Cristal",
-    start: 5,
-    precio: "200.00",
-  },
-  {
-    src: "https://medias.treew.com/imgproducts/thumbs/157370.jpg",
-    title: "Cerveza Bucanero",
-    descripcion: "Fuerte Cerveza Bucanero",
-    start: 5,
-    precio: "200.00",
-  },
-  {
-    src: "https://www.totalwine.com/dynamic/x1000,6pk/media/sys_master/twmmedia/ha0/h4b/26759934378014.png",
-    title: "Cerveza Mayabe",
-    descripcion: "Refrescante Cerveza Mayabe",
-    start: 5,
-    precio: "150.00",
-  },
-  {
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCoENIeujoEZJT4Z_9LV3s-E6YsRGfnlguw&s",
-    title: "Refresco Ciego Montero",
-    descripcion: "Refresco Limon, Cola, Naranja",
-    start: 5,
-    precio: "150.00",
-  },
-  {
-    src: "https://medias.treew.com/imgproducts/middle/169168.jpg",
-    title: "Refresco Ciego Montero",
-    descripcion: "Refresco TuKola",
-    start: 5,
-    precio: "150.00",
-  },
-  {
-    src: "https://cdnx.jumpseller.com/la-familia-avilena-envios/image/24304256/resize/280/280?1653234946",
-    title: "Refresco Ciego Montero",
-    descripcion: "Maltas Hollandia",
-    start: 5,
-    precio: "200.00",
-  },
 ]);
 </script>
 

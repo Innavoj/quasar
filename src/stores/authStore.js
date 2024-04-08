@@ -8,6 +8,7 @@ import "src/services/AuthFirebase.js";
 
 export const useCounterStore = defineStore("counter", {
   state: () => ({
+    titulo: "Isla Caribean",
     token: "null",
     userEmail: "",
     isUser: false,
