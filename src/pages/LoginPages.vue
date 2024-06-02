@@ -60,7 +60,7 @@
             outline
           />
           <q-btn
-            @click="loginGoogle"
+            @click="store.loginGoogle()"
             type="submit"
             label="Login con Google"
             color="success"
@@ -77,14 +77,14 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useCounterStore } from "src/stores/authStore";
+import { ref } from 'vue'
+import { useCounterStore } from 'src/stores/authStore'
 
-const store = useCounterStore();
+const store = useCounterStore()
 
-const email = ref("");
-const password = ref("");
-const isPwd = ref(true);
+const email = ref('')
+const password = ref('')
+const isPwd = ref(true)
 </script>
 
 <style scoped>
