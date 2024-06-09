@@ -1,4 +1,5 @@
-# Quasar App (quasar)
+# Desarrollo “Reservas para un restaurant” que optimiza la gestión de reservas en un restaurant, mejora la interacción con el cliente, facilitando un crecimiento en el negocio. utilizando Vue3 con Quasar UI. Disponible para los emprendedores en los negocios de restaunrant. Abierto a nuevas modificaciones y actualizaciones de Feeback. 🍟🍔🍛🍴
+
 
 A Quasar Project
 
@@ -29,5 +30,3 @@ npm run lint
 quasar build
 ```
 
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).

@@ -7,7 +7,7 @@
         class="text-center wrap"
         style="color: blueviolet; font-family: Welcome"
       >
-        Restaurant Isla Segura
+        Restaurant {{ store.titulo }}
       </h3>
       <q-form>
         <div class="row">
@@ -20,7 +20,8 @@
         </div>
         <div class="row-md-4">
           <q-input
-            class="q-ma-xs"
+            :rules="store.rulesEmail"
+            class="q-ma-lg"
             v-model="email"
             filled
             type="text"
@@ -30,17 +31,13 @@
         </div>
         <div class="row-md-4">
           <q-input
-            class="q-ma-xs"
+            class="q-ma-lg"
             color="accent"
             v-model="password"
             filled
             :type="isPwd ? 'password' : 'text'"
             label="Password"
-            :rules="[
-              (val) =>
-                (val && val.length > 8) ||
-                'La password debe tener mas de 8 caracteres',
-            ]"
+            :rules="store.rulesPasswd"
           >
             <template v-slot:append>
               <q-icon
@@ -57,13 +54,13 @@
             label="Conectar"
             type="submit"
             icon="mdi-check-circle"
-            color="green"
+            color="cyan"
             class="q-pa-xs q-ma-xs"
             align="center"
             outline
           />
           <q-btn
-            @click="loginGoogle"
+            @click="store.loginGoogle()"
             type="submit"
             label="Login con Google"
             color="success"
@@ -80,14 +77,14 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useCounterStore } from "src/stores/authStore";
+import { ref } from 'vue'
+import { useCounterStore } from 'src/stores/authStore'
 
-const store = useCounterStore();
+const store = useCounterStore()
 
-const email = ref("");
-const password = ref("");
-const isPwd = ref(true);
+const email = ref('')
+const password = ref('')
+const isPwd = ref(true)
 </script>
 
 <style scoped>
