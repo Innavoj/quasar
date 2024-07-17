@@ -1,5 +1,5 @@
 import {  ref } from "vue";
-
+const base_URL= process.env.APP_URL;
 class AuthServices {
   private token ;
 
@@ -13,7 +13,7 @@ class AuthServices {
 
   async userLogin(email, password) {
     try {
-      const url = new URL("https://ademass.com/barbershop/api/login");
+      const url = new URL(base_URL);
 
       const headers = {
         "Content-Type": "application/json",

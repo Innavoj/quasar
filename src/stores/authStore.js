@@ -1,8 +1,6 @@
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
 import { defineStore } from 'pinia'
-// import { useRouter } from "vue-router";
-// import routes from "src/router/routes";
-// const router = useRouter();
+
 
 import 'src/services/AuthFirebase.js'
 

@@ -49,7 +49,7 @@
           </q-input>
         </div>
         <div class="row wrap q-ma-md flex-center">
-          <q-btn
+          <!-- <q-btn
             @click="store.userLogin(email, password)"
             label="Conectar"
             type="submit"
@@ -58,7 +58,7 @@
             class="q-pa-xs q-ma-xs"
             align="center"
             outline
-          />
+          /> -->
           <q-btn
             @click="store.loginGoogle()"
             type="submit"

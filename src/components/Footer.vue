@@ -26,7 +26,7 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-2">
         <h6>Sobre Nosotros</h6>
-        <a>Calle Camino de la Isla. Santiago de Cuba. Cuba</a>
+        <a>Camino de la Isla. Santiago de Cuba. Cuba</a>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-2">
         <h6>Politica</h6>
@@ -36,8 +36,8 @@
       </div>
       <div class="col-xs-12 col-sm-6 col-md-2">
         <h6>Contactos</h6>
-        <a href="#">gerente@gmail.com</a>
-        <a href="#">islasegura@gmail.com</a>
+        <a href="#">innavojaruges2371974@gmail.com</a>
+       
       </div>
     </div>
     <q-separator />
@@ -60,20 +60,16 @@ export default {
   data: () => ({
     redes: [
       {
-        icons: "mdi-facebook",
-        src: "https://www.facebook.com",
+        icons: "mdi-github",
+        src: "https://github.com/Innavoj",
       },
       {
-        icons: "mdi-instagram",
-        src: "https://www.instagram.com",
+        icons: "mdi-linkedin",
+        src: "https://www.linkedin.com/in/innavojaruges",
       },
       {
-        icons: "mdi-youtube",
-        src: "https://www.youtube.com",
-      },
-      {
-        icons: "mdi-twitter",
-        src: "https://www.twitter.com",
+        icons: "mdi-whatsapp",
+        src: "https://wa.link/ab44l4",
       },
     ],
     store: useCounterStore(),
