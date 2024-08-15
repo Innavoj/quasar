@@ -1,7 +1,6 @@
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth'
 import { defineStore } from 'pinia'
 
-
 import 'src/services/AuthFirebase.js'
 
 export const useCounterStore = defineStore('counter', {
@@ -9,7 +8,7 @@ export const useCounterStore = defineStore('counter', {
     titulo: 'Isla Caribean',
     token: 'null',
     userEmail: '',
-    isUser: false,
+    isUser: true,
     errorCode: '',
     errorMessage: '',
     userId: '',

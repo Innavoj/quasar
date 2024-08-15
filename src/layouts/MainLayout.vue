@@ -21,15 +21,15 @@
 </template>
 
 <script setup>
-import MenuBar from "src/components/MenuBar.vue";
-import Footer from "src/components/Footer.vue";
-import { useRouter } from "vue-router";
+import MenuBar from 'src/components/MenuBar.vue'
+import Footer from 'src/components/Footer.vue'
+import { useRouter } from 'vue-router'
 
 const isLayout = () => {
-  const route = useRouter();
-  //console.log('route', route);
-  return route.meta.requiredAuth;
-};
+  const route = useRouter()
+  // console.log('route', route);
+  return route.meta.requiredAuth
+}
 </script>
 
 <style lang="sass" scoped>

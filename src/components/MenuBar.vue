@@ -11,8 +11,8 @@
         }}</strong>
       </q-toolbar-title>
 
-      <q-btn v-if="!store.userId" to=/login flat round dense icon="mdi-login"
-      class="q-mr-xs" label="Login" />
+      <!-- <q-btn v-if="!store.userId" to=/login flat round dense icon="mdi-login"
+      class="q-mr-xs" label="Login" /> -->
       <q-btn
         v-if="store.userId"
         @click="store.userLogout"
@@ -27,7 +27,7 @@
   </q-header>
   <!--Menu Lateral Drawer-->
   <q-drawer
-    v-if="store.userId"
+    v-if="!store.userId"
     v-model="drawer"
     show-if-above
     :mini="miniState"
@@ -133,14 +133,14 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useCounterStore } from "src/stores/authStore";
-import Calendar from "components/Calendar.vue";
+import { ref } from 'vue'
+import { useCounterStore } from 'src/stores/authStore'
+import Calendar from 'components/Calendar.vue'
 
-const drawer = ref(false);
-const miniState = ref(true);
+const drawer = ref(false)
+const miniState = ref(true)
 
-const store = useCounterStore();
+const store = useCounterStore()
 </script>
 
 <style scoped></style>
